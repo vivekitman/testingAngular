@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
  
  
-import { ReusableButton } from './reusable-button/reusable-button';
+ 
+import { ReusableFormFieldComponent } from './reusable-form-field-component/reusable-form-field-component';
 
 @Component({
   selector: 'app-root', 
-  imports: [ ReusableButton],
+  imports: [ ReusableFormFieldComponent ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
