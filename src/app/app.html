@@ -1,1 +1,10 @@
-<app-reusable-button  [lebal]="'Save'" (clicked)="SaveData()" ></app-reusable-button >
+<app-reusable-form-field-component  [label]="'Email'"
+    [type]="'email'"
+    (valueChange)="onEmailChange($event)"
+    
+    
+    
+    ></app-reusable-form-field-component >
+
+    
+<p>Email : {{email}}</p>
