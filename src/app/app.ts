@@ -12,9 +12,11 @@ import { ReusableFormFieldComponent } from './reusable-form-field-component/reus
 })
 export class App {
 
-  SaveData(){
-    console.log("Data Saved");
+   email = '';
+
+  onEmailChange(value: string){
+    console.log('Email:', value);
+    this.email = value;
   }
-   
 
 }

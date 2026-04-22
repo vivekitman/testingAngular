@@ -1,7 +1,4 @@
-<p>reusable-form-field-component works!</p>
-
-
-
-
-<label>{{label}}</label>    
-<input type="type()" [value]="value()"  >
+<label>{{label()}}</label>
+<input
+ [type]="type()"
+ (input)="onInput($event.target.value)" />

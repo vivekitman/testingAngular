@@ -1,4 +1,4 @@
-import { Component , input } from '@angular/core';
+import { Component , input ,output } from '@angular/core';
 
 @Component({
   selector: 'app-reusable-form-field-component',
@@ -7,7 +7,13 @@ import { Component , input } from '@angular/core';
   styleUrl: './reusable-form-field-component.css',
 })
 export class ReusableFormFieldComponent {
- lebal= input<string>();
-value= input<string>();
-valueChange= input<string>('Text');
+ label = input<string>();
+  // value = input<string>();
+  type = input<string>('text');
+  valueChange = output<string>();
+
+  onInput(value:string){
+    console.log('Child Value:',value);
+    this.valueChange.emit(value);
+}
 }

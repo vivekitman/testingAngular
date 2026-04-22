@@ -1,1 +1,10 @@
-<app-reusable-form-field-component label="Username" value="JohnDoe"></app-reusable-form-field-component >
+<app-reusable-form-field-component  [label]="'Email'"
+    [type]="'email'"
+    (valueChange)="onEmailChange($event)"
+    
+    
+    
+    ></app-reusable-form-field-component >
+
+    
+<p>Email : {{email}}</p>
