@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
  
  
  
-import { ReusableFormFieldComponent } from './reusable-form-field-component/reusable-form-field-component';
 
 @Component({
   selector: 'app-root', 
-  imports: [ ReusableFormFieldComponent ],
+  imports: [  RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
