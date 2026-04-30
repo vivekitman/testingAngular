@@ -1,19 +1,22 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
  
  
-import { ReusableButton } from './reusable-button/reusable-button';
+ 
 
 @Component({
   selector: 'app-root', 
-  imports: [ ReusableButton],
+  imports: [  RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  SaveData(){
-    console.log("Data Saved");
+   email = '';
+
+  onEmailChange(value: string){
+    console.log('Email:', value);
+    this.email = value;
   }
-   
 
 }
