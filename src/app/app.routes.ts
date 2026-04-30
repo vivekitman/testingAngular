@@ -1,22 +1,15 @@
 import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
-import { Dashboard } from './dashboard/dashboard';
-import { Profile } from './dashboard/profile/profile';
-import { Setting } from './dashboard/setting/setting';
+import { HomeComponent } from './home-component/home-component';
+import { AboutComponent } from './about-component/about-component';
+import { ContactComponent } from './contact-component/contact-component';
  
  
 
 export const routes: Routes = [
+    {path:'',component:HomeComponent},
+    {path:'about',component:AboutComponent},
+    {path:'contact',component:ContactComponent}
 
-       {
-        path: 'dashboard', 
-        component: Dashboard,
-        children: [
-            {path: 'profile', component: Profile},
-            {path: 'setting', component: Setting}
-        ]
-    },
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
- 
 
 ];
