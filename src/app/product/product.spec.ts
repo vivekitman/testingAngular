@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReusableButton } from './reusable-button';
+import { Product } from './product';
 
-describe('ReusableButton', () => {
-  let component: ReusableButton;
-  let fixture: ComponentFixture<ReusableButton>;
+describe('Product', () => {
+  let component: Product;
+  let fixture: ComponentFixture<Product>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReusableButton]
+      imports: [Product]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ReusableButton);
+    fixture = TestBed.createComponent(Product);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

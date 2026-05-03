@@ -1,19 +1,21 @@
 import { Component, signal } from '@angular/core';
+import {  RouterLink, RouterOutlet  } from '@angular/router';
  
  
-import { ReusableButton } from './reusable-button/reusable-button';
+ 
+ 
+ 
 
 @Component({
   selector: 'app-root', 
-  imports: [ ReusableButton],
+  imports: [ RouterLink, RouterOutlet ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  SaveData(){
-    console.log("Data Saved");
-  }
-   
+
+
+  
 
 }
