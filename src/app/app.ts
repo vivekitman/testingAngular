@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import {  RouterLink, RouterOutlet  } from '@angular/router';
+import { User } from './user';
  
  
  
@@ -8,13 +9,22 @@ import {  RouterLink, RouterOutlet  } from '@angular/router';
 
 @Component({
   selector: 'app-root', 
-  imports: [ RouterLink, RouterOutlet ],
+  imports: [  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
+users: any[] = [];
 
+  constructor(private userService: User){}
+
+  ngOnInit() {
+    this.userService.getUsers().subscribe((data: any)=>{
+      this.users = data;
+       
+    })
+  }
 
   
 

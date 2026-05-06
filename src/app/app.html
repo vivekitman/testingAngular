@@ -1,4 +1,8 @@
  
+<h3>User List</h3>
 
- <router-outlet></router-outlet>
-
+<ul>
+    @for (user of users; track user.id) {
+        <li>{{ user.name }} - ({{ user.email }})</li>
+    }
+</ul>
