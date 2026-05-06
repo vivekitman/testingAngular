@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
-import {  RouterLink, RouterOutlet  } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+ 
 import { User } from './user';
+import { toSignal } from '@angular/core/rxjs-interop';
  
  
  
@@ -15,17 +16,7 @@ import { User } from './user';
 })
 export class App {
 
-users: any[] = [];
+  userService = inject(User);
 
-  constructor(private userService: User){}
-
-  ngOnInit() {
-    this.userService.getUsers().subscribe((data: any)=>{
-      this.users = data;
-       
-    })
-  }
-
-  
-
+  users : any = toSignal(this.userService.getUsers());
 }
