@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IUser } from '../Models/Iuser';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class User  {
   constructor(private http: HttpClient) { }
 
   getUsers(){
-    return this.http.get(this.apiURL);
+    return this.http.get<IUser[]>(this.apiURL);
   }
   
 }
