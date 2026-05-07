@@ -9,7 +9,7 @@ export class User  {
 
 
 
-   apiURL = 'https://jsonplaceholder.typicode.com/users';
+   apiURL = 'http://localhost:3000/users';
 
   constructor(private http: HttpClient) { }
 
@@ -18,3 +18,4 @@ export class User  {
   }
   
 }
+1
