@@ -1,19 +1,22 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+ 
+import { User } from './user';
+import { toSignal } from '@angular/core/rxjs-interop';
  
  
-import { ReusableButton } from './reusable-button/reusable-button';
+ 
+ 
+ 
 
 @Component({
   selector: 'app-root', 
-  imports: [ ReusableButton],
+  imports: [  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  SaveData(){
-    console.log("Data Saved");
-  }
-   
+  userService = inject(User);
 
+  users : any = toSignal(this.userService.getUsers());
 }

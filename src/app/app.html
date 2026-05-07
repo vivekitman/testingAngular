@@ -1,1 +1,9 @@
-<app-reusable-button  [lebal]="'Save'" (clicked)="SaveData()" ></app-reusable-button >
+ 
+<h3>User List</h3>
+
+<ul>
+    @for (user of users(); track users.id) {
+        <li>{{ user.name }} <br>q ({{ user.email }}) ({{ user.id }}), ({{ user.address }})</li>
+
+    }
+</ul>
