@@ -1,24 +1,34 @@
- [
-  {
-    "id": 1,
-    "name": "Alice",
-    "email": "alice@gmail.com"
-  },
-  {
-    "id": 2,
-    "name": "Mohit",
-    "email": "mohit@gmail.com"
-  },
-  {
-    "id": 3,
-    "name": "Rahul",
-    "email": "rahul@gmail.com"
-  },
-  {
-    "id": 4,
-    "name": "Priya",
-    "email": "priya@gmail.com",
-    "isActive": true
-  }
-]
-  
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mohit Kumar",
+      "email": "mohit@gmail.com",
+      "isActive": true
+    },
+    {
+      "id": "3b17",
+      "name": "Amit",
+      "email": "amit@gmail.com",
+      "isActive": false
+    },
+    {
+      "id": "bf47",
+      "name": "Nitin",
+      "email": "nitin@gmail.com",
+      "isActive": false
+    },
+    {
+      "id": "5a97",
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "isActive": false
+    },
+    {
+      "id": "959d",
+      "name": "Amit Kumar",
+      "email": "test@gmail.com",
+      "isActive": true
+    }
+  ]
+}
