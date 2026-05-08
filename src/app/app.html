@@ -2,8 +2,9 @@
 <h3>User List</h3>
 
 <ul>
-    @for (user of users(); track users.id) {
-        <li>{{ user.name }} <br>q ({{ user.email }}) ({{ user.id }}), ({{ user.address }})</li>
+    @for (user of users(); track $index) {
+         
+        <li> {{ user.name }} - {{ user.email }} -   </li>
 
     }
 </ul>
