@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Mohit Kumar",
       "email": "mohit@gmail.com",
       "isActive": true
@@ -29,6 +29,13 @@
       "name": "Amit Kumar",
       "email": "test@gmail.com",
       "isActive": true
+    },
+    {
+      "name": "ram",
+      "email": "amv.vivek@gmail.com",
+      "isActive": false,
+      "id": "_TeMqrcQRxE"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
