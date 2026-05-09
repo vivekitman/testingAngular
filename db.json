@@ -1,22 +1,10 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Mohit Kumar",
-      "email": "mohit@gmail.com",
-      "isActive": false
-    },
-    {
-      "id": "3b17",
-      "name": "Amit",
-      "email": "amit@gmail.com",
-      "isActive": false
-    },
-    {
-      "id": "bf47",
       "name": "Nitin",
       "email": "nitin@gmail.com",
-      "isActive": false
+      "isActive": false,
+      "id": "bf47"
     },
     {
       "name": "ram",
@@ -53,6 +41,12 @@
       "email": "sdfsdfd",
       "isActive": false,
       "id": "tnoV565ez40"
+    },
+    {
+      "name": "aead",
+      "email": "amv.vivek@gmail.com",
+      "isActive": false,
+      "id": "6-pZgFLP1v4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
