@@ -20,4 +20,11 @@ export class UserService {
    addUser(user: User): Observable<User> {
     return this.http.post<User>(this.apiURL, user);
 }
+
+
+ //Update an existing user(PUT API)
+  updateUser(id: number, user: User): Observable<User> {
+    return this.http.put<User>(`${this.apiURL}/${id}`, user);
+
+}
 }
