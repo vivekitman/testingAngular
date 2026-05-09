@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Mohit Kumar",
       "email": "mohit@gmail.com",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "3b17",
@@ -27,7 +27,7 @@
     {
       "name": "Rani",
       "email": "rani@gmail.com",
-      "isActive": false,
+      "isActive": true,
       "id": "959d"
     },
     {
@@ -47,6 +47,12 @@
       "email": "amv.vivek@gmail.com",
       "isActive": false,
       "id": "icmXC9JgMlc"
+    },
+    {
+      "name": "ram",
+      "email": "sdfsdfd",
+      "isActive": false,
+      "id": "tnoV565ez40"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

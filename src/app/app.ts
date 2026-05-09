@@ -75,4 +75,16 @@ export class App {
     this.email.set('');
     this.editingUpdateID.set(null);
   }
+
+
+  toggleStatus(user: User) {
+    this.userService.updateUserStatus(user.id!, !user.isActive).subscribe(() =>{
+      this.users.update( list =>
+        list.map( u =>
+          u.id === user.id ? { ...u, isActive: !u.isActive } : u
+        )
+      )
+    })
+  }
+
 }
