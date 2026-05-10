@@ -1,53 +1,39 @@
 {
-  "users": [
+  "reviews": [
     {
-      "name": "Nitin",
-      "email": "nitin@gmail.com",
-      "isActive": false,
-      "id": "bf47"
+      "id": 1,
+      "name": "Aarav Sharma",
+      "job": "Frontend Developer",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "Angular Signals make state management super easy."
     },
     {
-      "name": "ram",
-      "email": "rohit@gmail.com",
-      "isActive": false,
-      "id": "5a97"
+      "id": 2,
+      "name": "Neha Verma",
+      "job": "UI Designer",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "text": "This review slider project is very beginner friendly."
     },
     {
-      "name": "Rani",
-      "email": "rani@gmail.com",
-      "isActive": true,
-      "id": "959d"
+      "id": 3,
+      "name": "Rahul Mehta",
+      "job": "Software Engineer",
+      "image": "https://randomuser.me/api/portraits/men/76.jpg",
+      "text": "Using signals feels clean and modern in Angular."
     },
     {
-      "name": "RK",
-      "email": "rk@gmail.com",
-      "isActive": true,
-      "id": "9a7d"
+      "id": 4,
+      "name": "Pooja Singh",
+      "job": "Angular Developer",
+      "image": "https://randomuser.me/api/portraits/women/65.jpg",
+      "text": "Perfect project for portfolios and interviews."
     },
     {
-      "id": "3e93",
-      "name": "Mohit Decodes",
-      "email": "MD@gmail.com",
-      "isActive": false
-    },
-    {
-      "name": "mohan",
-      "email": "amv.vivek@gmail.com",
-      "isActive": false,
-      "id": "icmXC9JgMlc"
-    },
-    {
-      "name": "ram",
-      "email": "sdfsdfd",
-      "isActive": false,
-      "id": "tnoV565ez40"
-    },
-    {
-      "name": "aead",
-      "email": "amv.vivek@gmail.com",
-      "isActive": false,
-      "id": "6-pZgFLP1v4"
+      "id": 5,
+      "name": "Vikram Patel",
+      "job": "Full Stack Developer",
+      "image": "https://randomuser.me/api/portraits/men/89.jpg",
+      "text": "I learned a lot about Angular Signals from this."
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

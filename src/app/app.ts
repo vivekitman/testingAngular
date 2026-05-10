@@ -1,9 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
+import { Review, ReviewService } from './review-service';
  
- 
-import { toSignal } from '@angular/core/rxjs-interop';
-import { UserService } from './services/user-service';
-import { User } from './Models/user';
  
  
  
@@ -17,85 +14,45 @@ import { User } from './Models/user';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
+
 export class App {
-  // userService = inject(UserService);
+   reviews: Review[] = []
+  currentIndex = signal(0);
+  loading = signal(true);
 
-  // users = toSignal<User[]>( this.userService.getUsers())
-
-  users = signal<User[]>([]);
-  name = signal<string>('');
-  email = signal<string>('');
-
-  editingUpdateID = signal<number | null>(null);
-
-  constructor(private userService: UserService) {}
+  constructor(private reviewService:ReviewService) {}
 
   ngOnInit() {
-    this.loadUsers(); // Load users on component initialization
+    this.reviewService.getReviews().subscribe((data) => {
+      this.reviews = data;
+      this.loading.set(false);
+    })
   }
 
-  loadUsers() {
-    this.userService.getUsers().subscribe((data) => {
-      this.users.set(data);
-    });
+  get currentReview(): Review | null {
+    return this.reviews.length ? this.reviews[this.currentIndex()] : null;
   }
 
-  // Clicked Edit
-  editUser(user: User) {
-    this.editingUpdateID.set(user.id!);
-    this.name.set(user.name);
-    this.email.set(user.email);
-  }
-
-  //Add and Update User
-  submitForm() {
-    const payload: User = {
-      name: this.name(),
-      email: this.email(),
-      isActive: false,
-    };
-    //Update User
-    if (this.editingUpdateID() !== null) {
-      this.userService.updateUser(this.editingUpdateID()!, payload).subscribe(() => {
-        alert('User updated successfully');
-        this.afterSave();
-      });
-    } else {
-      //Add User
-      this.userService.addUser(payload).subscribe(() => {
-        alert('User added successfully');
-        this.afterSave();
-      });
+  nextReview(){
+    let index = this.currentIndex() + 1;
+    if(index >= this.reviews.length){
+      index = 0;
     }
+    this.currentIndex.set(index);
   }
 
-  afterSave() {
-    this.loadUsers();
-    this.name.set('');
-    this.email.set('');
-    this.editingUpdateID.set(null);
+  previousReview(){
+    let index = this.currentIndex() - 1;
+    if(index < 0){
+      index = this.reviews.length - 1;
+    }
+    this.currentIndex.set(index);
   }
 
-
-  toggleStatus(user: User) {
-    this.userService.updateUserStatus(user.id!, !user.isActive).subscribe(() =>{
-      this.users.update( list =>
-        list.map( u =>
-          u.id === user.id ? { ...u, isActive: !u.isActive } : u
-        )
-      )
-    })
+  randomReview(){
+    let index = Math.floor(Math.random() * this.reviews.length);
+    this.currentIndex.set(index);
   }
-
-   deleteUser( user : User){
-    const confirmDelete = confirm(`Are you sure you want to delete ${user.name}?`);
-    if( !confirmDelete ) return;
-
-    this.userService.deleteUser(user.id!).subscribe(()=>{
-      this.users.update( list =>
-        list.filter( u => u.id !== user.id )
-      )
-    })
-  }
-
 }
+
